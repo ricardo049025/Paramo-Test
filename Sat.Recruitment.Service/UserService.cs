@@ -25,7 +25,7 @@ namespace Sat.Recruitment.Service
             string fields = String.Empty;
 
             if (string.IsNullOrEmpty(name))
-                fields += "Name";
+                fields += "Name,";
             if (string.IsNullOrEmpty(email))
                 fields += "Email,";
             if (string.IsNullOrEmpty(address))
@@ -34,7 +34,7 @@ namespace Sat.Recruitment.Service
                 fields += "Phone";
 
             if (!String.IsNullOrEmpty(fields))
-                xerror = $"The next fields are required: ${fields}";
+                xerror = $"The next fields are required: {fields}";
 
             return String.IsNullOrEmpty(fields);
         }
